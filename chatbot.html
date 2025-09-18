@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AgriAdvisor AI Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="chat-header">
+    <span class="chat-logo">AgriAdvisor AI Chat</span>
+    <a href="index.html" class="back-home">← Back to Home</a>
+    <label class="lang-select">
+      Language:
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+      </select>
+    </label>
+  </header>
+
+  <main class="chat-main">
+    <div class="chat-welcome">
+      <h1>Welcome, Farmer!</h1>
+      <p>How can I help you today? Ask about crop diseases, soil health, or the best farming practices.</p>
+    </div>
+    <div id="chat-log" class="chat-log"></div>
+    <div class="chat-footer">
+      <form id="chat-form" autocomplete="off">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Type your question or use the mic..." />
+        <button type="button" class="chat-btn-mic" title="Speak" id="mic-btn">🎤</button>
+        <button id="img-btn" title="Upload Image">🖼️</button>
+        <input type="file" id="image-upload" accept="image/*" style="display:none;" />
+        <button type="submit" class="chat-btn-send" title="Send">➤</button>
+        
+
+      </form>
+    </div>
+  </main>
+  <!-- <footer>
+    © 2025 AgriAdvisor AI | Empowering Every Farmer
+  </footer> -->
+  <script src="chatbot.js"></script>
+</body>
+</html>
